@@ -2,107 +2,146 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>CO3133 - Group [ID] - Assignment 1</title>
-<style>
-  body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-  h1, h2 { color: #1a3c6e; }
-  nav a { margin-right: 15px; }
-  .section { margin-bottom: 28px; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assignment 1 · CO3133 Group [ID]</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav><a href="index.html">← Landing page</a> | <a href="assignment2.html">Assignment 2</a> | <a href="assignment3.html">Assignment 3</a></nav>
-
-<!-- Assignment title -->
-<h1>Assignment 1 — Foundations of Deep Learning Pipelines and Architectures</h1>
-<p><em>Topic: From Linear Models to Modern Sequence Models: A Comparative Study for Image Classification.</em></p>
-
-<!-- Group members -->
-<div class="section">
-  <h2>Group Members</h2>
-  <p>[Liệt kê họ tên + MSSV các thành viên, giống trang landing page]</p>
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">BK</span> CO3133 · GROUP [ID]</a>
+    <nav class="crumbs">
+      <a href="assignment1.html" class="active">Assignment 1</a>
+      <a href="assignment2.html">Assignment 2</a>
+      <a href="assignment3.html">Assignment 3</a>
+    </nav>
+  </div>
 </div>
 
-<!-- Instructor -->
-<div class="section">
-  <h2>Instructor</h2>
-  <p>Lê Thành Sách</p>
-</div>
+<header class="hero" style="padding-bottom:20px;">
+  <div class="wrap">
+    <p class="eyebrow">Assignment 01 · 40% of course project</p>
+    <h1 style="font-size:clamp(28px,4vw,42px);">Foundations of Deep Learning<br>Pipelines and Architectures</h1>
+    <p class="sub">From Linear Models to Modern Sequence Models: a comparative study for image classification.</p>
+    <div class="meta-row">
+      <span class="chip">Instructor <strong>Lê Thành Sách</strong></span>
+      <span class="chip">Models <strong>Linear → MLP → CNN → LSTM/GRU → Transformer</strong></span>
+      <span class="chip">Dataset <strong>Fashion-MNIST</strong></span>
+    </div>
+  </div>
+</header>
 
-<!-- Problem statement -->
-<div class="section">
-  <h2>Problem Statement</h2>
-  <p>[Mô tả bài toán: động lực thực tế, input, output, đơn vị dự đoán, công thức toán học nếu phù hợp, khó khăn chính]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§1</span><h2>Group Members</h2></div>
+    <p class="placeholder">[Liệt kê họ tên + MSSV các thành viên, giống trang landing page]</p>
+  </div>
+</section>
 
-<!-- Dataset description and EDA -->
-<div class="section">
-  <h2>Dataset Description and EDA</h2>
-  <p>[Nguồn/version/license dataset dùng để debug (MNIST) và dataset chính (Fashion-MNIST); optional CIFAR-10.
-     EDA tối thiểu: class distribution, input size, imbalance analysis, representative samples.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§2</span><h2>Problem Statement</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Mô tả bài toán: động lực thực tế, input, output, đơn vị dự đoán, công thức toán học nếu phù hợp, khó khăn chính.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Methodology -->
-<div class="section">
-  <h2>Methodology</h2>
-  <p>[Sơ đồ pipeline: Raw data → preprocessing → data loader → model → loss → optimization → prediction → post-processing → evaluation.
-     Mô tả 5 model bắt buộc: Linear/Softmax, MLP, CNN, LSTM/GRU, Transformer — kiến trúc, input representation, loss, số tham số,
-     phần nào tự implement / phần nào dùng thư viện (ghi rõ tên thư viện).]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§3</span><h2>Dataset Description &amp; EDA</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Nguồn/version/license dataset dùng để debug (MNIST) và dataset chính (Fashion-MNIST); optional CIFAR-10.
+      EDA tối thiểu: class distribution, input size, imbalance analysis, representative samples.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Experimental setup -->
-<div class="section">
-  <h2>Experimental Setup</h2>
-  <p>[Optimizer, learning rate, batch size, epochs, scheduler, regularization, early stopping, checkpoint criterion, seed,
-     hardware, mixed precision (nếu có), training time, cách chọn hyperparameter. Đảm bảo cùng 1 data split/seed cho tất cả model.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§4</span><h2>Methodology</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Sơ đồ pipeline: Raw data → preprocessing → data loader → model → loss → optimization → prediction →
+      post-processing → evaluation. Mô tả 5 model bắt buộc: Linear/Softmax, MLP, CNN, LSTM/GRU, Transformer —
+      kiến trúc, input representation, loss, số tham số, phần nào tự implement / phần nào dùng thư viện (ghi rõ tên thư viện).]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Results -->
-<div class="section">
-  <h2>Results</h2>
-  <p>[Accuracy, Macro-F1, số tham số, training/inference time, training & validation curves, confusion matrix,
-     ví dụ dự đoán đúng/sai cho từng model.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§5</span><h2>Experimental Setup</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Optimizer, learning rate, batch size, epochs, scheduler, regularization, early stopping, checkpoint
+      criterion, seed, hardware, mixed precision (nếu có), training time, cách chọn hyperparameter. Đảm bảo cùng 1
+      data split/seed cho tất cả model.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Comparison and discussion -->
-<div class="section">
-  <h2>Comparison and Discussion</h2>
-  <p>[Model nào tốt hơn và tốt hơn bao nhiêu; khác biệt xuất hiện ở đâu; nguyên nhân liên quan data/architecture/loss/training;
-     đánh đổi accuracy-speed-parameter; ảnh hưởng của inductive bias và cách biểu diễn dữ liệu. Không chỉ dựa vào accuracy để kết luận.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§6</span><h2>Results</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Accuracy, Macro-F1, số tham số, training/inference time, training &amp; validation curves,
+      confusion matrix, ví dụ dự đoán đúng/sai cho từng model.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Error analysis -->
-<div class="section">
-  <h2>Error Analysis</h2>
-  <p>[Với mỗi nhóm lỗi: mô tả, tần suất/tỉ lệ nếu có thể, ví dụ, nguyên nhân giả định, ý tưởng cải thiện.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§7</span><h2>Comparison &amp; Discussion</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Model nào tốt hơn và tốt hơn bao nhiêu; khác biệt xuất hiện ở đâu; nguyên nhân liên quan
+      data/architecture/loss/training; đánh đổi accuracy-speed-parameter; ảnh hưởng của inductive bias và cách
+      biểu diễn dữ liệu. Không chỉ dựa vào accuracy để kết luận.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Limitations and conclusion -->
-<div class="section">
-  <h2>Limitations and Conclusion</h2>
-  <p>[Giới hạn về data, method, thực nghiệm; khả năng tổng quát hoá; hướng phát triển; trả lời ngắn gọn câu hỏi nghiên cứu.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§8</span><h2>Error Analysis</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Với mỗi nhóm lỗi: mô tả, tần suất/tỉ lệ nếu có thể, ví dụ, nguyên nhân giả định, ý tưởng cải thiện.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Links -->
-<div class="section">
-  <h2>Links</h2>
-  <ul>
-    <li>Source code: <a href="[Link repo code]">[Link repo code]</a></li>
-    <li>Checkpoint(s) / hướng dẫn tái tạo checkpoint: <a href="[Link checkpoint]">[Link checkpoint]</a></li>
-    <li>Report / Slides: <a href="[Link report hoặc slides]">[Link report/slides]</a></li>
-    <li>YouTube presentation video: <a href="[Link YouTube]">[Link YouTube]</a></li>
-  </ul>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§9</span><h2>Limitations &amp; Conclusion</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Giới hạn về data, method, thực nghiệm; khả năng tổng quát hoá; hướng phát triển; trả lời ngắn gọn câu hỏi nghiên cứu.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- AI Usage Disclosure (assignment-specific) -->
-<div class="section">
-  <h2>AI Usage Disclosure</h2>
-  <p>[Nếu không dùng AI, ghi nguyên văn: "The group declares that no generative AI tool was used in this assignment."
-     Nếu có dùng, với MỖI công cụ AI ghi rõ theo Section 5.2 handbook:
-     Tool name/version, Used by, Task/Purpose, Stage, Affected section(s), Representative prompt/prompt-log link,
-     How AI output was edited and verified, Responsible member, Sources used for verification.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§10</span><h2>Links</h2></div>
+    <ul class="link-list">
+      <li><span class="label">SOURCE CODE</span><a href="[Link repo code]">[Link repo code]</a></li>
+      <li><span class="label">CHECKPOINTS</span><a href="[Link checkpoint]">[Link checkpoint / hướng dẫn tái tạo]</a></li>
+      <li><span class="label">REPORT / SLIDES</span><a href="[Link report hoặc slides]">[Link report/slides]</a></li>
+      <li><span class="label">VIDEO</span><a href="[Link YouTube]">[Link YouTube presentation]</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§11</span><h2>AI Usage Disclosure</h2></div>
+    <div class="notice">
+      [Nếu không dùng AI, ghi nguyên văn: <code>The group declares that no generative AI tool was used in this assignment.</code>
+      Nếu có dùng, ghi đầy đủ theo Section 5.2 handbook cho từng công cụ AI đã dùng (xem chi tiết trong AI_USAGE.md).]
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">CO3133 · Semester-261 · Group [ID] · Assignment 1</div></footer>
 
 </body>
 </html>
