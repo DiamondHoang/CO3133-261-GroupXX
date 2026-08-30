@@ -1,0 +1,365 @@
+/* ============================================================
+   CO3133 Course Project — shared design system
+   Palette: blueprint paper + navy ink + academic gold
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg:          #F3F6FB;
+  --bg-panel:    #FFFFFF;
+  --ink:         #10203B;
+  --ink-soft:    #526080;
+  --line:        #C6D3E8;
+  --line-faint:  #DCE5F3;
+  --gold:        #C0913A;
+  --gold-soft:   #EFE1C4;
+  --radius:      14px;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Inter', -apple-system, Segoe UI, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(var(--line-faint) 1px, transparent 1px) 0 0 / 100% 42px,
+    linear-gradient(90deg, var(--line-faint) 1px, transparent 1px) 0 0 / 42px 100%,
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------- Top bar / breadcrumb nav ---------- */
+.topbar {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.topbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.brand .mark {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold-soft);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+}
+.crumbs { display: flex; gap: 18px; }
+.crumbs a {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+}
+.crumbs a:hover, .crumbs a.active {
+  color: var(--ink);
+  border-bottom-color: var(--gold);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 64px 0 40px;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 14px;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.08;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+.hero .sub {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: 640px;
+  margin: 0 0 6px;
+}
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.chip {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink);
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+.chip strong { color: var(--gold); font-weight: 600; }
+
+/* ---------- Pipeline signature diagram ---------- */
+.pipeline {
+  margin-top: 44px;
+  padding: 26px 22px 30px;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+.pipeline-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+.pipeline-track {
+  display: flex;
+  align-items: center;
+  min-width: 720px;
+}
+.pipe-node {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink);
+}
+.pipe-node .dot {
+  width: 11px; height: 11px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: var(--bg-panel);
+  border: 2px solid var(--ink);
+}
+.pipe-connector {
+  flex: 0.6;
+  height: 2px;
+  background-image: linear-gradient(90deg, var(--ink) 50%, transparent 0%);
+  background-size: 8px 2px;
+  position: relative;
+  top: -21px;
+  overflow: visible;
+}
+.pipe-connector .flow-dot {
+  position: absolute;
+  top: -3px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: flow 3.6s linear infinite;
+}
+.pipe-connector:nth-child(2n) .flow-dot { animation-delay: 0.4s; }
+.pipe-connector:nth-child(3n) .flow-dot { animation-delay: 0.9s; }
+@keyframes flow {
+  0%   { left: 0%;   opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pipe-connector .flow-dot { animation: none; opacity: 0.6; left: 50%; }
+}
+
+/* ---------- Section shell ---------- */
+.section {
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+}
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.section-num {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--gold);
+}
+.section h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 26px;
+  margin: 0;
+  color: var(--ink);
+}
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+.panel + .panel { margin-top: 14px; }
+.placeholder { color: var(--ink-soft); }
+
+/* ---------- Team table ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+.member-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+.member-card .name {
+  font-weight: 600;
+  font-size: 15px;
+}
+.member-card .id {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--gold);
+  margin-top: 2px;
+}
+.member-card .role {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin-top: 8px;
+}
+.member-card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--ink-soft);
+}
+
+/* ---------- Assignment index cards ---------- */
+.assign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.assign-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.assign-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(16,32,59,0.08);
+}
+.assign-card .idx {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--gold);
+}
+.assign-card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin: 0;
+}
+.assign-card .topic {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  flex-grow: 1;
+}
+.weight-bar {
+  height: 6px;
+  border-radius: 4px;
+  background: var(--line-faint);
+  overflow: hidden;
+}
+.weight-bar span {
+  display: block;
+  height: 100%;
+  background: var(--gold);
+}
+.weight-label {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Links list ---------- */
+.link-list { list-style: none; padding: 0; margin: 0; }
+.link-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line-faint);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14.5px;
+}
+.link-list li:last-child { border-bottom: none; }
+.link-list .label { color: var(--ink-soft); font-family: var(--font-mono); font-size: 12.5px; }
+.link-list a { color: var(--ink); font-weight: 500; }
+
+/* ---------- AI disclosure notice ---------- */
+.notice {
+  border: 1px dashed var(--gold);
+  background: var(--gold-soft);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  font-size: 14.5px;
+}
+.notice code {
+  font-family: var(--font-mono);
+  background: rgba(255,255,255,0.6);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 34px 0 60px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-family: var(--font-mono);
+}
