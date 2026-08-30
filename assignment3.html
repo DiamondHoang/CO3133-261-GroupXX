@@ -2,113 +2,150 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>CO3133 - Group [ID] - Assignment 3</title>
-<style>
-  body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-  h1, h2 { color: #1a3c6e; }
-  nav a { margin-right: 15px; }
-  .section { margin-bottom: 28px; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assignment 3 · CO3133 Group [ID]</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav><a href="index.html">← Landing page</a> | <a href="assignment1.html">Assignment 1</a> | <a href="assignment2.html">Assignment 2</a></nav>
-
-<!-- Assignment title -->
-<h1>Assignment 3 — Multimodal Deep Learning</h1>
-<p><em>Topic: Multimodal Deep Learning: Representation, Fusion, and Evaluation.</em></p>
-
-<!-- Group members -->
-<div class="section">
-  <h2>Group Members</h2>
-  <p>[Liệt kê họ tên + MSSV các thành viên, giống trang landing page]</p>
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">BK</span> CO3133 · GROUP [ID]</a>
+    <nav class="crumbs">
+      <a href="assignment1.html">Assignment 1</a>
+      <a href="assignment2.html">Assignment 2</a>
+      <a href="assignment3.html" class="active">Assignment 3</a>
+    </nav>
+  </div>
 </div>
 
-<!-- Instructor -->
-<div class="section">
-  <h2>Instructor</h2>
-  <p>Lê Thành Sách</p>
-</div>
+<header class="hero" style="padding-bottom:20px;">
+  <div class="wrap">
+    <p class="eyebrow">Assignment 03 · 30% of course project</p>
+    <h1 style="font-size:clamp(28px,4vw,42px);">Multimodal Deep Learning</h1>
+    <p class="sub">Representation, fusion, and evaluation across modalities.</p>
+    <div class="meta-row">
+      <span class="chip">Instructor <strong>Lê Thành Sách</strong></span>
+      <span class="chip">Task <strong>[Điền task đã chọn]</strong></span>
+      <span class="chip">Proposal status <strong>[Approved / Approved with conditions / Rejected]</strong></span>
+    </div>
+  </div>
+</header>
 
-<!-- Problem statement -->
-<div class="section">
-  <h2>Problem Statement</h2>
-  <p>[Task đã chọn: Image–text classification / Image–text retrieval / VQA / Image captioning /
-     Open-vocabulary detection / Text-guided segmentation / RGB–depth prediction / Video–text retrieval /
-     Re-identification with image and metadata/text / hoặc task khác được duyệt.
-     Ít nhất 2 modality có liên hệ thực sự (cùng entity/event/scene/timestamp).]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§1</span><h2>Group Members</h2></div>
+    <p class="placeholder">[Liệt kê họ tên + MSSV các thành viên, giống trang landing page]</p>
+  </div>
+</section>
 
-<!-- Dataset description and EDA -->
-<div class="section">
-  <h2>Dataset Description and EDA</h2>
-  <p>[Nguồn/version/license, số cặp mẫu, loại annotation. EDA multimodal: pair counts, missing modality rates,
-     text length nếu có, pair quality.]</p>
-  <p><strong>Dataset Proposal &amp; Approval status:</strong> [Approved / Approved with conditions / Rejected — kèm ngày duyệt]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§2</span><h2>Problem Statement</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Task đã chọn: Image–text classification / Image–text retrieval / VQA / Image captioning /
+      Open-vocabulary detection / Text-guided segmentation / RGB–depth prediction / Video–text retrieval /
+      Re-identification with image and metadata/text / hoặc task khác được duyệt. Ít nhất 2 modality có liên hệ
+      thực sự (cùng entity/event/scene/timestamp).]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Methodology -->
-<div class="section">
-  <h2>Methodology</h2>
-  <p>[Sơ đồ pipeline: Raw paired data → preprocessing → data loader → encoders → fusion → loss →
-     optimization → prediction → evaluation.
-     Mô tả: encoder cho từng modality, cách biểu diễn từng modality, quy trình alignment dữ liệu,
-     giai đoạn fusion (early/intermediate/late), phép toán fusion, loss theo từng modality và loss tổng,
-     xử lý missing-modality (nếu có), chiến lược pretraining/fine-tuning.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§3</span><h2>Dataset Description &amp; EDA</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Nguồn/version/license, số cặp mẫu, loại annotation. EDA multimodal: pair counts,
+      missing modality rates, text length nếu có, pair quality.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Experimental setup -->
-<div class="section">
-  <h2>Experimental Setup</h2>
-  <p>[Optimizer, learning rate, batch size, epochs, seed, hardware, training time.
-     Baseline modality A, baseline modality B, simple fusion baseline, improved fusion model.
-     Ít nhất 1 ablation loại bỏ/thay đổi 1 modality hoặc 1 thành phần fusion.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§4</span><h2>Methodology</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Sơ đồ pipeline: Raw paired data → preprocessing → data loader → encoders → fusion →
+      loss → optimization → prediction → evaluation. Mô tả: encoder cho từng modality, cách biểu diễn từng modality,
+      quy trình alignment dữ liệu, giai đoạn fusion (early/intermediate/late), phép toán fusion, loss theo từng modality
+      và loss tổng, xử lý missing-modality (nếu có), chiến lược pretraining/fine-tuning.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Results -->
-<div class="section">
-  <h2>Results</h2>
-  <p>[Metric theo task: Classification (accuracy, macro-F1) / Retrieval (Recall@1, Recall@5, Recall@10, median rank) /
-     Captioning (CIDEr/BLEU + qualitative) / VQA (accuracy theo protocol) / Detection-Segmentation (mAP/mIoU) /
-     RGB–depth (metric tương ứng). So sánh unimodal vs. multimodal.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§5</span><h2>Experimental Setup</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Optimizer, learning rate, batch size, epochs, seed, hardware, training time.
+      Baseline modality A, baseline modality B, simple fusion baseline, improved fusion model. Ít nhất 1 ablation
+      loại bỏ/thay đổi 1 modality hoặc 1 thành phần fusion.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Comparison and discussion -->
-<div class="section">
-  <h2>Comparison and Discussion</h2>
-  <p>[Trường hợp các modality hỗ trợ nhau; trường hợp xung đột; nếu multimodal không vượt unimodal thì
-     phân tích nguyên nhân bằng dữ liệu/bằng chứng thực nghiệm; compute-cost analysis.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§6</span><h2>Results</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Metric theo task: Classification (accuracy, macro-F1) / Retrieval (Recall@1, Recall@5,
+      Recall@10, median rank) / Captioning (CIDEr/BLEU + qualitative) / VQA (accuracy theo protocol) /
+      Detection-Segmentation (mAP/mIoU) / RGB–depth (metric tương ứng). So sánh unimodal vs. multimodal.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Error analysis -->
-<div class="section">
-  <h2>Error Analysis</h2>
-  <p>[Nhóm lỗi, tần suất, ví dụ, nguyên nhân giả định, ý tưởng cải thiện.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§7</span><h2>Comparison &amp; Discussion</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Trường hợp các modality hỗ trợ nhau; trường hợp xung đột; nếu multimodal không vượt
+      unimodal thì phân tích nguyên nhân bằng dữ liệu/bằng chứng thực nghiệm; compute-cost analysis.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Limitations and conclusion -->
-<div class="section">
-  <h2>Limitations and Conclusion</h2>
-  <p>[Giới hạn data/method/thực nghiệm, khả năng tổng quát hoá, hướng phát triển, kết luận.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§8</span><h2>Error Analysis</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Nhóm lỗi, tần suất, ví dụ, nguyên nhân giả định, ý tưởng cải thiện.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- Links -->
-<div class="section">
-  <h2>Links</h2>
-  <ul>
-    <li>Source code: <a href="[Link repo code]">[Link repo code]</a></li>
-    <li>Checkpoint(s) / hướng dẫn tái tạo checkpoint: <a href="[Link checkpoint]">[Link checkpoint]</a></li>
-    <li>Report / Slides: <a href="[Link report hoặc slides]">[Link report/slides]</a></li>
-    <li>YouTube presentation video: <a href="[Link YouTube]">[Link YouTube]</a> (cần thảo luận modality interaction: support vs. conflict cases)</li>
-  </ul>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§9</span><h2>Limitations &amp; Conclusion</h2></div>
+    <div class="panel">
+      <p class="placeholder">[Giới hạn data/method/thực nghiệm, khả năng tổng quát hoá, hướng phát triển, kết luận.]</p>
+    </div>
+  </div>
+</section>
 
-<!-- AI Usage Disclosure (assignment-specific) -->
-<div class="section">
-  <h2>AI Usage Disclosure</h2>
-  <p>[Nếu không dùng AI, ghi nguyên văn: "The group declares that no generative AI tool was used in this assignment."
-     Nếu có dùng, ghi đầy đủ theo Section 5.2 handbook cho từng công cụ AI đã dùng.]</p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§10</span><h2>Links</h2></div>
+    <ul class="link-list">
+      <li><span class="label">SOURCE CODE</span><a href="[Link repo code]">[Link repo code]</a></li>
+      <li><span class="label">CHECKPOINTS</span><a href="[Link checkpoint]">[Link checkpoint / hướng dẫn tái tạo]</a></li>
+      <li><span class="label">REPORT / SLIDES</span><a href="[Link report hoặc slides]">[Link report/slides]</a></li>
+      <li><span class="label">VIDEO</span><a href="[Link YouTube]">[Link YouTube — cần thảo luận modality interaction: support vs. conflict cases]</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§11</span><h2>AI Usage Disclosure</h2></div>
+    <div class="notice">
+      [Nếu không dùng AI, ghi nguyên văn: <code>The group declares that no generative AI tool was used in this assignment.</code>
+      Nếu có dùng, ghi đầy đủ theo Section 5.2 handbook cho từng công cụ AI đã dùng (xem chi tiết trong AI_USAGE.md).]
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">CO3133 · Semester-261 · Group [ID] · Assignment 3</div></footer>
 
 </body>
 </html>
