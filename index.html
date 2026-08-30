@@ -2,85 +2,134 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>CO3133 - Group [ID] - Course Project</title>
-<style>
-  body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-  h1, h2 { color: #1a3c6e; }
-  table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
-  th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-  nav a { margin-right: 15px; font-weight: bold; }
-  .section { margin-bottom: 30px; }
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CO3133 · Group [ID] — Deep Learning and Its Applications</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Institutional information -->
-<h1>Ho Chi Minh City University of Technology (HCMUT), VNU-HCM</h1>
-<p>Faculty of Computer Science and Engineering</p>
-
-<!-- Course information -->
-<div class="section">
-  <h2>Course Information</h2>
-  <p><strong>Course name:</strong> Deep Learning and Its Applications</p>
-  <p><strong>Course code:</strong> CO3133</p>
-  <p><strong>Semester:</strong> 261</p>
-  <p><strong>Instructor:</strong> Lê Thành Sách</p>
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">BK</span> CO3133 · GROUP [ID]</a>
+    <nav class="crumbs">
+      <a href="assignment1.html">Assignment 1</a>
+      <a href="assignment2.html">Assignment 2</a>
+      <a href="assignment3.html">Assignment 3</a>
+    </nav>
+  </div>
 </div>
 
-<!-- Group information -->
-<div class="section">
-  <h2>Group Information</h2>
-  <p><strong>Group name / ID:</strong> [Điền tên hoặc mã nhóm]</p>
-  <table>
-    <tr>
-      <th>Full name</th>
-      <th>Student ID</th>
-      <th>Main role / contribution</th>
-      <th>GitHub profile</th>
-    </tr>
-    <tr>
-      <td>[Họ tên thành viên 1]</td>
-      <td>[MSSV 1]</td>
-      <td>[Vai trò / đóng góp chính]</td>
-      <td><a href="[Link GitHub profile, để trống nếu không có]">[GitHub link]</a></td>
-    </tr>
-    <tr>
-      <td>[Họ tên thành viên 2]</td>
-      <td>[MSSV 2]</td>
-      <td>[Vai trò / đóng góp chính]</td>
-      <td><a href="[Link GitHub profile]">[GitHub link]</a></td>
-    </tr>
-    <tr>
-      <td>[Họ tên thành viên 3]</td>
-      <td>[MSSV 3]</td>
-      <td>[Vai trò / đóng góp chính]</td>
-      <td><a href="[Link GitHub profile]">[GitHub link]</a></td>
-    </tr>
-    <!-- Thêm dòng nếu nhóm có 4 thành viên -->
-  </table>
-  <p><strong>Link to group's code repository:</strong> <a href="[Link repo code]">[Link repo code]</a></p>
-</div>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Ho Chi Minh City University of Technology (HCMUT), VNU-HCM · Faculty of Computer Science and Engineering</p>
+    <h1>Deep Learning<br>and Its Applications</h1>
+    <p class="sub">Course project — three assignments spanning foundational pipelines, large-scale specialized tasks, and multimodal deep learning.</p>
+    <div class="meta-row">
+      <span class="chip">Course code <strong>CO3133</strong></span>
+      <span class="chip">Semester <strong>261</strong></span>
+      <span class="chip">Instructor <strong>Lê Thành Sách</strong></span>
+      <span class="chip">Group <strong>[ID]</strong></span>
+    </div>
 
-<!-- Assignment index -->
-<div class="section">
-  <h2>Assignments</h2>
-  <nav>
-    <a href="assignment1.html">Assignment 1</a>
-    <a href="assignment2.html">Assignment 2</a>
-    <a href="assignment3.html">Assignment 3</a>
-  </nav>
-</div>
+    <div class="pipeline">
+      <p class="pipeline-label">Shared training pipeline · used across all three assignments</p>
+      <div class="pipeline-track">
+        <div class="pipe-node"><div class="dot"></div>Raw data</div>
+        <div class="pipe-connector"><div class="flow-dot"></div></div>
+        <div class="pipe-node"><div class="dot"></div>Preprocessing</div>
+        <div class="pipe-connector"><div class="flow-dot"></div></div>
+        <div class="pipe-node"><div class="dot"></div>Data loader</div>
+        <div class="pipe-connector"><div class="flow-dot"></div></div>
+        <div class="pipe-node"><div class="dot"></div>Model</div>
+        <div class="pipe-connector"><div class="flow-dot"></div></div>
+        <div class="pipe-node"><div class="dot"></div>Loss</div>
+        <div class="pipe-connector"><div class="flow-dot"></div></div>
+        <div class="pipe-node"><div class="dot"></div>Optimization</div>
+        <div class="pipe-connector"><div class="flow-dot"></div></div>
+        <div class="pipe-node"><div class="dot"></div>Prediction</div>
+        <div class="pipe-connector"><div class="flow-dot"></div></div>
+        <div class="pipe-node"><div class="dot"></div>Evaluation</div>
+      </div>
+    </div>
+  </div>
+</header>
 
-<!-- AI Usage Disclosure (landing) -->
-<div class="section">
-  <h2>AI Usage Disclosure (Summary across course projects)</h2>
-  <p>[Tóm tắt việc sử dụng AI trong toàn bộ course project.
-     Nếu KHÔNG dùng AI, ghi nguyên văn:
-     "The group declares that no generative AI tool was used in this assignment."
-     Nếu có dùng, tóm tắt ngắn gọn và trỏ tới AI_USAGE.md trong repo và mục AI Usage Disclosure
-     ở từng trang assignment / report để xem chi tiết đầy đủ theo Section 5.2 của handbook.]</p>
-  <p>Chi tiết đầy đủ: <a href="[Link tới AI_USAGE.md trên repo]">AI_USAGE.md</a></p>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§1</span><h2>Group</h2></div>
+    <div class="team-grid">
+      <div class="member-card">
+        <div class="name">[Họ tên thành viên 1]</div>
+        <div class="id">[MSSV 1]</div>
+        <div class="role">[Vai trò / đóng góp chính]</div>
+        <a href="[Link GitHub profile]">github.com/[username]</a>
+      </div>
+      <div class="member-card">
+        <div class="name">[Họ tên thành viên 2]</div>
+        <div class="id">[MSSV 2]</div>
+        <div class="role">[Vai trò / đóng góp chính]</div>
+        <a href="[Link GitHub profile]">github.com/[username]</a>
+      </div>
+      <div class="member-card">
+        <div class="name">[Họ tên thành viên 3]</div>
+        <div class="id">[MSSV 3]</div>
+        <div class="role">[Vai trò / đóng góp chính]</div>
+        <a href="[Link GitHub profile]">github.com/[username]</a>
+      </div>
+      <!-- Thêm .member-card nếu nhóm có thành viên thứ 4 -->
+    </div>
+    <p style="margin-top:16px; font-size:14.5px;">
+      Code repository:
+      <a href="[Link repo code]">[Link repo code]</a>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§2</span><h2>Assignments</h2></div>
+    <div class="assign-grid">
+      <a class="assign-card" href="assignment1.html">
+        <span class="idx">01</span>
+        <h3>Foundations of Deep Learning Pipelines and Architectures</h3>
+        <p class="topic">From Linear Models to Modern Sequence Models: a comparative study for image classification.</p>
+        <div class="weight-bar"><span style="width:40%"></span></div>
+        <span class="weight-label">40% of course project</span>
+      </a>
+      <a class="assign-card" href="assignment2.html">
+        <span class="idx">02</span>
+        <h3>Deep Learning on Large-Scale Data and Specialized Tasks</h3>
+        <p class="topic">Large-scale data for specialized computer vision or language tasks.</p>
+        <div class="weight-bar"><span style="width:30%"></span></div>
+        <span class="weight-label">30% of course project</span>
+      </a>
+      <a class="assign-card" href="assignment3.html">
+        <span class="idx">03</span>
+        <h3>Multimodal Deep Learning</h3>
+        <p class="topic">Representation, fusion, and evaluation across modalities.</p>
+        <div class="weight-bar"><span style="width:30%"></span></div>
+        <span class="weight-label">30% of course project</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">§3</span><h2>AI Usage Disclosure</h2></div>
+    <div class="notice">
+      [Tóm tắt việc sử dụng AI trong toàn bộ course project. Nếu KHÔNG dùng AI, ghi nguyên văn:
+      <code>The group declares that no generative AI tool was used in this assignment.</code>
+      Nếu có dùng, tóm tắt ngắn gọn và trỏ tới <code>AI_USAGE.md</code> trong repo để xem chi tiết đầy đủ.]
+      <br><br>
+      Chi tiết đầy đủ: <a href="[Link tới AI_USAGE.md trên repo]">AI_USAGE.md</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">CO3133 · Semester-261 · Group [ID]</div>
+</footer>
 
 </body>
 </html>
