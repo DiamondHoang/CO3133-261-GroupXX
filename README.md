@@ -1,6 +1,8 @@
 # CO3133: Deep Learning and Its Applications (Semester-261)
 **Ho Chi Minh City University of Technology- VNU-HCM** 
+
 **Group name: Group XX** 
+
 **Instructor:** Lê Thành Sách
 
 ---
