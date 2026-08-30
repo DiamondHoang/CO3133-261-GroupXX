@@ -1,147 +1,285 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Assignment 1 · CO3133 Group [ID]</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 1 · CO3133</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="hcmut_logo.png" />
 </head>
 <body>
+  <div class="bg-animated"></div>
 
-<div class="topbar">
-  <div class="wrap">
-    <a class="brand" href="index.html"><span class="mark">BK</span> CO3133 · GROUP [ID]</a>
-    <nav class="crumbs">
-      <a href="assignment1.html" class="active">Assignment 1</a>
-      <a href="assignment2.html">Assignment 2</a>
-      <a href="assignment3.html">Assignment 3</a>
-    </nav>
-  </div>
-</div>
-
-<header class="hero" style="padding-bottom:20px;">
-  <div class="wrap">
-    <p class="eyebrow">Assignment 01 · 40% of course project</p>
-    <h1 style="font-size:clamp(28px,4vw,42px);">Foundations of Deep Learning<br>Pipelines and Architectures</h1>
-    <p class="sub">From Linear Models to Modern Sequence Models: a comparative study for image classification.</p>
-    <div class="meta-row">
-      <span class="chip">Instructor <strong>Lê Thành Sách</strong></span>
-      <span class="chip">Models <strong>Linear → MLP → CNN → LSTM/GRU → Transformer</strong></span>
-      <span class="chip">Dataset <strong>Fashion-MNIST</strong></span>
-    </div>
-  </div>
-</header>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§1</span><h2>Group Members</h2></div>
-    <p class="placeholder">[Liệt kê họ tên + MSSV các thành viên, giống trang landing page]</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§2</span><h2>Problem Statement</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Mô tả bài toán: động lực thực tế, input, output, đơn vị dự đoán, công thức toán học nếu phù hợp, khó khăn chính.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§3</span><h2>Dataset Description &amp; EDA</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Nguồn/version/license dataset dùng để debug (MNIST) và dataset chính (Fashion-MNIST); optional CIFAR-10.
-      EDA tối thiểu: class distribution, input size, imbalance analysis, representative samples.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§4</span><h2>Methodology</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Sơ đồ pipeline: Raw data → preprocessing → data loader → model → loss → optimization → prediction →
-      post-processing → evaluation. Mô tả 5 model bắt buộc: Linear/Softmax, MLP, CNN, LSTM/GRU, Transformer —
-      kiến trúc, input representation, loss, số tham số, phần nào tự implement / phần nào dùng thư viện (ghi rõ tên thư viện).]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§5</span><h2>Experimental Setup</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Optimizer, learning rate, batch size, epochs, scheduler, regularization, early stopping, checkpoint
-      criterion, seed, hardware, mixed precision (nếu có), training time, cách chọn hyperparameter. Đảm bảo cùng 1
-      data split/seed cho tất cả model.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§6</span><h2>Results</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Accuracy, Macro-F1, số tham số, training/inference time, training &amp; validation curves,
-      confusion matrix, ví dụ dự đoán đúng/sai cho từng model.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§7</span><h2>Comparison &amp; Discussion</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Model nào tốt hơn và tốt hơn bao nhiêu; khác biệt xuất hiện ở đâu; nguyên nhân liên quan
-      data/architecture/loss/training; đánh đổi accuracy-speed-parameter; ảnh hưởng của inductive bias và cách
-      biểu diễn dữ liệu. Không chỉ dựa vào accuracy để kết luận.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§8</span><h2>Error Analysis</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Với mỗi nhóm lỗi: mô tả, tần suất/tỉ lệ nếu có thể, ví dụ, nguyên nhân giả định, ý tưởng cải thiện.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§9</span><h2>Limitations &amp; Conclusion</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Giới hạn về data, method, thực nghiệm; khả năng tổng quát hoá; hướng phát triển; trả lời ngắn gọn câu hỏi nghiên cứu.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§10</span><h2>Links</h2></div>
-    <ul class="link-list">
-      <li><span class="label">SOURCE CODE</span><a href="[Link repo code]">[Link repo code]</a></li>
-      <li><span class="label">CHECKPOINTS</span><a href="[Link checkpoint]">[Link checkpoint / hướng dẫn tái tạo]</a></li>
-      <li><span class="label">REPORT / SLIDES</span><a href="[Link report hoặc slides]">[Link report/slides]</a></li>
-      <li><span class="label">VIDEO</span><a href="[Link YouTube]">[Link YouTube presentation]</a></li>
+  <!-- ===== Navigation Bar ===== -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="index.html">
+      <img src="hcmut_logo.png" alt="HCMUT Logo" />
+      <span>CO3133</span> Deep Learning
+    </a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="assignment1.html" class="active">Assignment 1</a></li>
+      <li><a href="assignment2.html">Assignment 2</a></li>
+      <li><a href="assignment3.html">Assignment 3</a></li>
     </ul>
-  </div>
-</section>
+  </nav>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§11</span><h2>AI Usage Disclosure</h2></div>
-    <div class="notice">
-      [Nếu không dùng AI, ghi nguyên văn: <code>The group declares that no generative AI tool was used in this assignment.</code>
-      Nếu có dùng, ghi đầy đủ theo Section 5.2 handbook cho từng công cụ AI đã dùng (xem chi tiết trong AI_USAGE.md).]
+  <main class="main-wrapper">
+    <div class="container">
+
+      <!-- Header Hero -->
+      <div class="page-hero-bright">
+        <img class="hero-logo" src="hcmut_logo.png" alt="HCMUT Logo" />
+        <div style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; font-weight:700; color:#0369a1; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">
+          Assignment 01 · CO3133 · Semester-261
+        </div>
+        <h1 class="page-hero-title-bright">Foundations of Deep Learning Pipelines and Architectures</h1>
+        <p class="page-hero-topic-bright">
+          From Linear Models to Modern Sequence Models: A Comparative Study for Image Classification.
+        </p>
+        <div class="hero-badges-group">
+          <span class="hero-badge-item">M1 Draft: 23 Sep 2026</span>
+          <span class="hero-badge-item">M2 Final: 21 Oct 2026</span>
+          <span class="hero-badge-item">Framework: PyTorch</span>
+          <span class="hero-badge-item">Task: Image Classification</span>
+        </div>
+      </div>
+
+      <!-- Problem Statement -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🎯</span>
+          <h2 class="section-title">Problem Statement</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            Students implement an end-to-end deep learning pipeline for a <strong>controlled-scale image classification problem</strong>,
+            then build and compare multiple architecture families under a shared data split and evaluation protocol.
+          </p>
+          <p style="margin-top:0.5rem">
+            <strong>Scope:</strong> Exploratory data analysis (EDA); train/validation/test splitting; Dataset and DataLoader design;
+            preprocessing and augmentation; training/validation/test pipelines in PyTorch; implementation and comparison of architecture families;
+            evaluation, error analysis, and a reproducible report.
+          </p>
+          
+          <h3>Learning Objectives</h3>
+          <ul class="styled-list">
+            <li>Construct a complete PyTorch training pipeline for image classification, including Dataset, DataLoader, preprocessing, augmentation, optimization, and evaluation.</li>
+            <li>Implement and explain linear/softmax, MLP, CNN, LSTM/GRU, and Transformer models for the same classification task.</li>
+            <li>Compare models using multiple quantitative metrics and qualitative evidence, not accuracy alone.</li>
+            <li>Analyze inductive bias and data representation choices (flattened pixels, spatial features, row/column/patch sequences).</li>
+            <li>Produce reproducible code, reports, GitHub Pages materials, and a presentation video that satisfy the course deliverable standard.</li>
+          </ul>
+
+          <p style="margin-top:0.75rem">
+            <strong>[Fill in here]</strong> — Real-world motivation; input; output; prediction unit; mathematical formulation when appropriate; main difficulties.
+          </p>
+        </div>
+      </section>
+
+      <!-- Dataset Description & EDA -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">📊</span>
+          <h2 class="section-title">Dataset Description &amp; EDA</h2>
+        </div>
+        <div class="content-card">
+          <p><strong>Dataset Requirements:</strong></p>
+          <ul class="styled-list">
+            <li>MNIST may be used for development and debugging only.</li>
+            <li>Primary results must be reported on <strong>Fashion-MNIST</strong>.</li>
+            <li>CIFAR-10 may be used as an optional extension.</li>
+            <li>All models in the main comparison must use the same data split (same train/validation/test partitions and the same random seed).</li>
+          </ul>
+
+          <h3>Dataset Details &amp; Exploratory Data Analysis</h3>
+          <p>
+            <strong>[Fill in here]</strong> — Source, version, license; collection/labeling process if known; sample counts and annotations;
+            class or target distribution; storage size and formats; bias and limitations.
+          </p>
+          <p style="margin-top:0.5rem">
+            <strong>EDA Content:</strong> Class distribution, input size, imbalance analysis, and representative sample visualizations.
+          </p>
+          <p style="margin-top:0.5rem">
+            <strong>Data Splitting:</strong> Report official/custom split, seed, stratification policy, and sample counts per split.
+          </p>
+          <p style="margin-top:0.5rem">
+            <strong>Preprocessing:</strong> Cleaning, resize/normalization, augmentation, input tensor shape(s), and an example batch.
+          </p>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">⚙️</span>
+          <h2 class="section-title">Methodology</h2>
+        </div>
+        <div class="content-card">
+          <h3>Pipeline Overview</h3>
+          <div class="pipeline-diagram">
+            Raw data → preprocessing → data loader → model → loss → optimization → prediction → post-processing → evaluation
+          </div>
+
+          <h3>Five Mandatory Models</h3>
+          <ul class="styled-list">
+            <li><strong>1. Linear / Softmax Classifier:</strong> Flatten image to vector → linear layer → cross-entropy loss (no softmax before CrossEntropyLoss).</li>
+            <li><strong>2. Multilayer Perceptron (MLP):</strong> At least one hidden layer; explain activation functions and regularization.</li>
+            <li><strong>3. Convolutional Neural Network (CNN):</strong> Self-designed architecture (not just a pretrained model); explain convolution, pooling, and feature maps.</li>
+            <li><strong>4. LSTM or GRU:</strong> Represent image as a sequence of rows, columns, or patches; explain timestep definition, input size, hidden representation.</li>
+            <li><strong>5. Transformer:</strong> Rows/columns or patches; token embedding/projection and positional encoding; explain self-attention mechanisms.</li>
+          </ul>
+
+          <h3>Optional Extensions</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            LSTM vs. GRU comparison; Mamba/SSMs; CIFAR-10 experiments; robustness &amp; interpretability evaluation; framework comparison (PyTorch vs. Keras); parameter/compute budget matching.
+          </p>
+
+          <p style="margin-top:0.75rem">
+            <strong>[Fill in here]</strong> — Architecture descriptions, parameter counts, self-implemented vs. library code, training hyperparameters (optimizer, lr, batch size, epochs, scheduler, seed, hardware).
+          </p>
+        </div>
+      </section>
+
+      <!-- Experimental Setup -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🧪</span>
+          <h2 class="section-title">Experimental Setup</h2>
+        </div>
+        <div class="content-card">
+          <h3>Mandatory Comparison Outputs</h3>
+          <ul class="styled-list">
+            <li>Accuracy &amp; Macro-F1</li>
+            <li>Number of parameters</li>
+            <li>Training time &amp; Inference time</li>
+            <li>Training and validation loss/metric curves</li>
+            <li>Confusion matrix</li>
+            <li>Correct and incorrect prediction examples</li>
+            <li>Analysis of data representation &amp; inductive bias effects (accuracy alone is not sufficient)</li>
+          </ul>
+
+          <p style="margin-top:0.75rem">
+            <strong>[Fill in here]</strong> — For each experiment: hypothesis, changed factor, fixed factors, metrics, and conclusion criteria.
+          </p>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">📈</span>
+          <h2 class="section-title">Results</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Training behavior (loss/metric curves, checkpoint selection, overfitting/underfitting);
+            quantitative comparison table (Accuracy, Macro-F1, Params, Train/Inference Time); qualitative prediction figures.
+          </p>
+        </div>
+      </section>
+
+      <!-- Comparison & Discussion -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">⚖️</span>
+          <h2 class="section-title">Comparison &amp; Discussion</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Which method is better and by how much; where differences appear;
+            causes related to data/architecture/loss/training; accuracy–speed–parameter trade-offs; whether hypotheses are supported.
+          </p>
+        </div>
+      </section>
+
+      <!-- Error Analysis -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🔍</span>
+          <h2 class="section-title">Error Analysis</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Error categories; failure cases; inductive bias limitations of each model family; hypothesized causes and potential improvements.
+          </p>
+        </div>
+      </section>
+
+      <!-- Limitations & Conclusion -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">💡</span>
+          <h2 class="section-title">Limitations &amp; Conclusion</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Data, model, and hardware limitations; generalization; future directions; concise answer to the research question.
+          </p>
+        </div>
+      </section>
+
+      <!-- Links & Deliverables -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🔗</span>
+          <h2 class="section-title">Deliverables &amp; Links</h2>
+        </div>
+        <div class="links-grid">
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box">💻</div>
+            <div>
+              <span class="link-label">Source Code</span>
+              <span class="link-sub">[GitHub Repo]</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box">🗂️</div>
+            <div>
+              <span class="link-label">Checkpoints</span>
+              <span class="link-sub">[Model Weights]</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box">📄</div>
+            <div>
+              <span class="link-label">Report / Slides</span>
+              <span class="link-sub">[PDF / Slides]</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box">▶️</div>
+            <div>
+              <span class="link-label">YouTube Video</span>
+              <span class="link-sub">CO3133-261-GroupXX-Assignment1</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- AI Usage Disclosure -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🛡️</span>
+          <h2 class="section-title">AI Usage Disclosure</h2>
+        </div>
+        <div class="disclosure-card">
+          <h3>Assignment 1 AI Usage Disclosure</h3>
+        </div>
+      </section>
+
     </div>
-  </div>
-</section>
+  </main>
 
-<footer><div class="wrap">CO3133 · Semester-261 · Group [ID] · Assignment 1</div></footer>
-
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <p>
+        <strong>Ho Chi Minh City University of Technology – VNU-HCM</strong><br />
+        Faculty of Computer Science and Engineering<br />
+        Deep Learning and Its Applications (CO3133) · Semester-261
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

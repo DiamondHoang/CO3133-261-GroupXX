@@ -1,151 +1,278 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Assignment 3 · CO3133 Group [ID]</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 3 · CO3133</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="hcmut_logo.png" />
 </head>
-<body>
+<body class="a3-page">
+  <div class="bg-animated"></div>
 
-<div class="topbar">
-  <div class="wrap">
-    <a class="brand" href="index.html"><span class="mark">BK</span> CO3133 · GROUP [ID]</a>
-    <nav class="crumbs">
-      <a href="assignment1.html">Assignment 1</a>
-      <a href="assignment2.html">Assignment 2</a>
-      <a href="assignment3.html" class="active">Assignment 3</a>
-    </nav>
-  </div>
-</div>
-
-<header class="hero" style="padding-bottom:20px;">
-  <div class="wrap">
-    <p class="eyebrow">Assignment 03 · 30% of course project</p>
-    <h1 style="font-size:clamp(28px,4vw,42px);">Multimodal Deep Learning</h1>
-    <p class="sub">Representation, fusion, and evaluation across modalities.</p>
-    <div class="meta-row">
-      <span class="chip">Instructor <strong>Lê Thành Sách</strong></span>
-      <span class="chip">Task <strong>[Điền task đã chọn]</strong></span>
-      <span class="chip">Proposal status <strong>[Approved / Approved with conditions / Rejected]</strong></span>
-    </div>
-  </div>
-</header>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§1</span><h2>Group Members</h2></div>
-    <p class="placeholder">[Liệt kê họ tên + MSSV các thành viên, giống trang landing page]</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§2</span><h2>Problem Statement</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Task đã chọn: Image–text classification / Image–text retrieval / VQA / Image captioning /
-      Open-vocabulary detection / Text-guided segmentation / RGB–depth prediction / Video–text retrieval /
-      Re-identification with image and metadata/text / hoặc task khác được duyệt. Ít nhất 2 modality có liên hệ
-      thực sự (cùng entity/event/scene/timestamp).]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§3</span><h2>Dataset Description &amp; EDA</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Nguồn/version/license, số cặp mẫu, loại annotation. EDA multimodal: pair counts,
-      missing modality rates, text length nếu có, pair quality.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§4</span><h2>Methodology</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Sơ đồ pipeline: Raw paired data → preprocessing → data loader → encoders → fusion →
-      loss → optimization → prediction → evaluation. Mô tả: encoder cho từng modality, cách biểu diễn từng modality,
-      quy trình alignment dữ liệu, giai đoạn fusion (early/intermediate/late), phép toán fusion, loss theo từng modality
-      và loss tổng, xử lý missing-modality (nếu có), chiến lược pretraining/fine-tuning.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§5</span><h2>Experimental Setup</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Optimizer, learning rate, batch size, epochs, seed, hardware, training time.
-      Baseline modality A, baseline modality B, simple fusion baseline, improved fusion model. Ít nhất 1 ablation
-      loại bỏ/thay đổi 1 modality hoặc 1 thành phần fusion.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§6</span><h2>Results</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Metric theo task: Classification (accuracy, macro-F1) / Retrieval (Recall@1, Recall@5,
-      Recall@10, median rank) / Captioning (CIDEr/BLEU + qualitative) / VQA (accuracy theo protocol) /
-      Detection-Segmentation (mAP/mIoU) / RGB–depth (metric tương ứng). So sánh unimodal vs. multimodal.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§7</span><h2>Comparison &amp; Discussion</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Trường hợp các modality hỗ trợ nhau; trường hợp xung đột; nếu multimodal không vượt
-      unimodal thì phân tích nguyên nhân bằng dữ liệu/bằng chứng thực nghiệm; compute-cost analysis.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§8</span><h2>Error Analysis</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Nhóm lỗi, tần suất, ví dụ, nguyên nhân giả định, ý tưởng cải thiện.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§9</span><h2>Limitations &amp; Conclusion</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Giới hạn data/method/thực nghiệm, khả năng tổng quát hoá, hướng phát triển, kết luận.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§10</span><h2>Links</h2></div>
-    <ul class="link-list">
-      <li><span class="label">SOURCE CODE</span><a href="[Link repo code]">[Link repo code]</a></li>
-      <li><span class="label">CHECKPOINTS</span><a href="[Link checkpoint]">[Link checkpoint / hướng dẫn tái tạo]</a></li>
-      <li><span class="label">REPORT / SLIDES</span><a href="[Link report hoặc slides]">[Link report/slides]</a></li>
-      <li><span class="label">VIDEO</span><a href="[Link YouTube]">[Link YouTube — cần thảo luận modality interaction: support vs. conflict cases]</a></li>
+  <!-- ===== Navigation Bar ===== -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="index.html">
+      <img src="hcmut_logo.png" alt="HCMUT Logo" />
+      <span>CO3133</span> Deep Learning
+    </a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="assignment1.html">Assignment 1</a></li>
+      <li><a href="assignment2.html">Assignment 2</a></li>
+      <li><a href="assignment3.html" class="active">Assignment 3</a></li>
     </ul>
-  </div>
-</section>
+  </nav>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§11</span><h2>AI Usage Disclosure</h2></div>
-    <div class="notice">
-      [Nếu không dùng AI, ghi nguyên văn: <code>The group declares that no generative AI tool was used in this assignment.</code>
-      Nếu có dùng, ghi đầy đủ theo Section 5.2 handbook cho từng công cụ AI đã dùng (xem chi tiết trong AI_USAGE.md).]
+  <main class="main-wrapper">
+    <div class="container">
+
+      <!-- Header Hero -->
+      <div class="page-hero-bright a3-theme">
+        <img class="hero-logo" src="hcmut_logo.png" alt="HCMUT Logo" />
+        <div style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; font-weight:700; color:#059669; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">
+          Assignment 03 · CO3133 · Semester-261
+        </div>
+        <h1 class="page-hero-title-bright">Multimodal Deep Learning</h1>
+        <p class="page-hero-topic-bright">
+          Multimodal Deep Learning: Representation, Fusion, and Evaluation.
+        </p>
+        <div class="hero-badges-group">
+          <span class="hero-badge-item">M1 Proposal: 18 Nov 2026</span>
+          <span class="hero-badge-item">M2 Draft: 25 Nov 2026</span>
+          <span class="hero-badge-item">M3 Final: 02 Dec 2026</span>
+        </div>
+      </div>
+
+      <!-- Problem Statement -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🎯</span>
+          <h2 class="section-title">Problem Statement</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            Assignment 3 tasks students to design, train, and evaluate a system that uses
+            <strong>at least two modalities that are genuinely related</strong> (same entity, event, scene, or timestamp).
+          </p>
+          <p style="margin-top:0.5rem">
+            <strong>Scope:</strong> Choose an approved multimodal task; submit a Dataset Proposal and obtain approval before implementation;
+            build unimodal baselines, a simple fusion baseline, and an improved multimodal/fusion model; analyze complementary and conflicting evidence.
+          </p>
+          
+          <h3>Chosen Multimodal Task Option</h3>
+          <p>
+            <strong>[Fill in here]</strong> — State selected task: Image–text classification, Image–text retrieval, Visual Question Answering (VQA),
+            Image captioning, Open-vocabulary detection, Text-guided segmentation, RGB–depth prediction, Video–text retrieval, or Re-identification with metadata.
+          </p>
+
+          <h3>Learning Objectives</h3>
+          <ul class="styled-list">
+            <li>Formulate a multimodal learning problem with genuine cross-modal alignment.</li>
+            <li>Implement modality-specific encoders and at least one fusion strategy (early, intermediate, or late).</li>
+            <li>Compare unimodal baselines against simple and improved multimodal models using task-appropriate metrics.</li>
+            <li>Conduct ablations that isolate modality contribution and fusion design choices.</li>
+            <li>Analyze complementary and conflicting modality evidence, errors, limitations, and compute cost.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Dataset Description & EDA -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">📊</span>
+          <h2 class="section-title">Dataset Description &amp; EDA</h2>
+        </div>
+        <div class="content-card">
+          <h3>Dataset Proposal &amp; Cross-Modal Validity</h3>
+          <p>
+            Status: <strong>[Approved / Approved with conditions / Rejected]</strong>
+          </p>
+          <ul class="styled-list">
+            <li>Dataset name, source, version, and license.</li>
+            <li>Task, modalities, input, and output definitions.</li>
+            <li>Cross-modal validity: paired by same entity, scene, or timestamp (no random pairing).</li>
+            <li>Data split unit (entity/scene level to prevent cross-modal leakage).</li>
+            <li>Default size threshold check (e.g. ≥5,000 paired samples).</li>
+          </ul>
+
+          <h3>Multimodal EDA</h3>
+          <p>
+            <strong>[Fill in here]</strong> — Report paired sample counts, missing modality rates, text length/token distributions, pair quality analysis, preprocessing, and example batches.
+          </p>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">⚙️</span>
+          <h2 class="section-title">Methodology</h2>
+        </div>
+        <div class="content-card">
+          <h3>Pipeline Overview</h3>
+          <div class="pipeline-diagram" style="color: #059669;">
+            Raw paired data → preprocessing → data loader → encoders → fusion → loss → optimization → prediction → evaluation
+          </div>
+
+          <h3>Mandatory Baselines &amp; Models</h3>
+          <ul class="styled-list">
+            <li><strong>1. Baseline Modality A:</strong> Unimodal baseline using modality A only.</li>
+            <li><strong>2. Baseline Modality B:</strong> Unimodal baseline using modality B only.</li>
+            <li><strong>3. Simple Fusion Baseline:</strong> A direct concatenation / simple fusion architecture.</li>
+            <li><strong>4. Improved Multimodal Model:</strong> Advanced fusion strategy (cross-attention, intermediate fusion, etc.).</li>
+          </ul>
+
+          <h3>Mandatory Method Content</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">
+            Modality encoders &amp; representations; data alignment procedure; fusion stage (early/intermediate/late) and operation; joint and per-modality losses; missing-modality handling if applicable; pretraining and fine-tuning strategy; ablation study design.
+          </p>
+
+          <p style="margin-top:0.75rem">
+            <strong>[Fill in here]</strong> — Architecture details, parameter counts, loss formulations, training configurations, optimizer, lr schedule, hardware.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experimental Setup -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🧪</span>
+          <h2 class="section-title">Experimental Setup</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>Mandatory experimental outputs:</strong> Unimodal vs. multimodal comparison; task-specific metrics;
+            support cases vs. conflict cases analysis; ablation study; compute-cost analysis.
+          </p>
+          <p style="margin-top:0.75rem">
+            <strong>[Fill in here]</strong> — For each experiment: hypothesis, changed factor, fixed factors, metrics, decision criteria, hardware &amp; software versions.
+          </p>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">📈</span>
+          <h2 class="section-title">Results</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Training behavior curves; quantitative metrics comparison table (Unimodal A, Unimodal B, Simple Fusion, Improved Model);
+            qualitative visualizations of predictions; examples of modality agreement vs. conflict.
+          </p>
+        </div>
+      </section>
+
+      <!-- Comparison & Discussion -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">⚖️</span>
+          <h2 class="section-title">Comparison &amp; Discussion</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Detailed analysis of when multimodal fusion outperforms unimodal models and when it does not;
+            modality synergy vs. interference; efficiency vs. accuracy trade-offs.
+          </p>
+        </div>
+      </section>
+
+      <!-- Error Analysis -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🔍</span>
+          <h2 class="section-title">Error Analysis</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Error taxonomy; failure cases caused by modality mismatch, noise, or dominant modality bias; ablation study findings.
+          </p>
+        </div>
+      </section>
+
+      <!-- Limitations & Conclusion -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">💡</span>
+          <h2 class="section-title">Limitations &amp; Conclusion</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Limitations of alignment/fusion; computational overhead; generalization; future multimodal enhancements.
+          </p>
+        </div>
+      </section>
+
+      <!-- Links & Deliverables -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🔗</span>
+          <h2 class="section-title">Deliverables &amp; Links</h2>
+        </div>
+        <div class="links-grid">
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box" style="background:#d1fae5; color:#059669;">💻</div>
+            <div>
+              <span class="link-label">Source Code</span>
+              <span class="link-sub">[GitHub Repo]</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box" style="background:#d1fae5; color:#059669;">🗂️</div>
+            <div>
+              <span class="link-label">Checkpoints</span>
+              <span class="link-sub">[Model Weights]</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box" style="background:#d1fae5; color:#059669;">📄</div>
+            <div>
+              <span class="link-label">Report / Slides</span>
+              <span class="link-sub">[PDF / Slides]</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box" style="background:#d1fae5; color:#059669;">▶️</div>
+            <div>
+              <span class="link-label">YouTube Video</span>
+              <span class="link-sub">CO3133-261-GroupXX-Assignment3</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box" style="background:#d1fae5; color:#059669;">📋</div>
+            <div>
+              <span class="link-label">Dataset Proposal</span>
+              <span class="link-sub">[Proposal &amp; Status]</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- AI Usage Disclosure -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🛡️</span>
+          <h2 class="section-title">AI Usage Disclosure</h2>
+        </div>
+        <div class="disclosure-card">
+          <h3>Assignment 3 AI Usage Disclosure</h3>
+        </div>
+      </section>
+
     </div>
-  </div>
-</section>
+  </main>
 
-<footer><div class="wrap">CO3133 · Semester-261 · Group [ID] · Assignment 3</div></footer>
-
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <p>
+        <strong>Ho Chi Minh City University of Technology – VNU-HCM</strong><br />
+        Faculty of Computer Science and Engineering<br />
+        Deep Learning and Its Applications (CO3133) · Semester-261
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

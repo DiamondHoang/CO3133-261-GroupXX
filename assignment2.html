@@ -1,148 +1,264 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Assignment 2 · CO3133 Group [ID]</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 2 · CO3133</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="hcmut_logo.png" />
 </head>
-<body>
+<body class="a2-page">
+  <div class="bg-animated"></div>
 
-<div class="topbar">
-  <div class="wrap">
-    <a class="brand" href="index.html"><span class="mark">BK</span> CO3133 · GROUP [ID]</a>
-    <nav class="crumbs">
-      <a href="assignment1.html">Assignment 1</a>
-      <a href="assignment2.html" class="active">Assignment 2</a>
-      <a href="assignment3.html">Assignment 3</a>
-    </nav>
-  </div>
-</div>
-
-<header class="hero" style="padding-bottom:20px;">
-  <div class="wrap">
-    <p class="eyebrow">Assignment 02 · 30% of course project</p>
-    <h1 style="font-size:clamp(28px,4vw,42px);">Deep Learning on Large-Scale Data<br>and Specialized Tasks</h1>
-    <p class="sub">Large-scale data for specialized computer vision or language tasks.</p>
-    <div class="meta-row">
-      <span class="chip">Instructor <strong>Lê Thành Sách</strong></span>
-      <span class="chip">Task track <strong>[Điền track đã chọn]</strong></span>
-      <span class="chip">Proposal status <strong>[Approved / Approved with conditions / Rejected]</strong></span>
-    </div>
-  </div>
-</header>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§1</span><h2>Group Members</h2></div>
-    <p class="placeholder">[Liệt kê họ tên + MSSV các thành viên, giống trang landing page]</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§2</span><h2>Problem Statement</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Task track đã chọn: Image classification / Text classification hoặc sequence labeling /
-      Object detection / Semantic hoặc instance segmentation / Re-identification / Monocular depth estimation /
-      task khác được duyệt. Mô tả động lực thực tế, input, output, khó khăn chính.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§3</span><h2>Dataset Description &amp; EDA</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Nguồn/version/license, số mẫu, loại annotation. EDA theo task đã chọn (class distribution /
-      object counts / pixel distribution / identity distribution / depth distribution... tuỳ track).]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§4</span><h2>Methodology</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Sơ đồ pipeline. Mô tả simple baseline, ít nhất 1 pretrained/modern model, quy trình
-      fine-tuning rõ ràng, phần nào tự implement / phần nào dùng thư viện (ghi rõ tên thư viện).]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§5</span><h2>Experimental Setup</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Optimizer, learning rate, batch size, epochs, scheduler, seed, hardware, training time.
-      Controlled experiment: hypothesis, changed factor, fixed factors, metric, tiêu chí kết luận (ví dụ: freeze vs.
-      full fine-tune, with vs. without augmentation, backbone A vs. B...).]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§6</span><h2>Results</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Metric theo task: Classification (accuracy, macro-F1) / Detection (mAP, AP by class/size) /
-      Segmentation (mIoU, Dice, mask AP nếu instance) / Re-ID (Rank-1, Rank-5, mAP) / Depth (Abs Rel, RMSE, δ accuracy) /
-      Text tasks (metric phù hợp có giải thích).]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§7</span><h2>Comparison &amp; Discussion</h2></div>
-    <div class="panel">
-      <p class="placeholder">[So sánh baseline vs. pretrained/modern model; nguyên nhân khác biệt; đánh đổi
-      accuracy-speed-parameter; compute-cost analysis.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§8</span><h2>Error Analysis</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Nhóm lỗi, tần suất, ví dụ, nguyên nhân giả định, ý tưởng cải thiện. Kèm ít nhất 1 ablation study.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§9</span><h2>Limitations &amp; Conclusion</h2></div>
-    <div class="panel">
-      <p class="placeholder">[Giới hạn data/method/thực nghiệm, khả năng tổng quát hoá, hướng phát triển, kết luận.]</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§10</span><h2>Links</h2></div>
-    <ul class="link-list">
-      <li><span class="label">SOURCE CODE</span><a href="[Link repo code]">[Link repo code]</a></li>
-      <li><span class="label">CHECKPOINTS</span><a href="[Link checkpoint]">[Link checkpoint / hướng dẫn tái tạo]</a></li>
-      <li><span class="label">REPORT / SLIDES</span><a href="[Link report hoặc slides]">[Link report/slides]</a></li>
-      <li><span class="label">VIDEO</span><a href="[Link YouTube]">[Link YouTube presentation]</a></li>
+  <!-- ===== Navigation Bar ===== -->
+  <nav class="navbar">
+    <a class="navbar-brand" href="index.html">
+      <img src="hcmut_logo.png" alt="HCMUT Logo" />
+      <span>CO3133</span> Deep Learning
+    </a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="assignment1.html">Assignment 1</a></li>
+      <li><a href="assignment2.html" class="active">Assignment 2</a></li>
+      <li><a href="assignment3.html">Assignment 3</a></li>
     </ul>
-  </div>
-</section>
+  </nav>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">§11</span><h2>AI Usage Disclosure</h2></div>
-    <div class="notice">
-      [Nếu không dùng AI, ghi nguyên văn: <code>The group declares that no generative AI tool was used in this assignment.</code>
-      Nếu có dùng, ghi đầy đủ theo Section 5.2 handbook cho từng công cụ AI đã dùng (xem chi tiết trong AI_USAGE.md).]
+  <main class="main-wrapper">
+    <div class="container">
+
+      <!-- Header Hero -->
+      <div class="page-hero-bright a2-theme">
+        <img class="hero-logo" src="hcmut_logo.png" alt="HCMUT Logo" />
+        <div style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; font-weight:700; color:#7c3aed; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">
+          Assignment 02 · CO3133 · Semester-261
+        </div>
+        <h1 class="page-hero-title-bright">Deep Learning on Large-Scale Data and Specialized Tasks</h1>
+        <p class="page-hero-topic-bright">
+          Deep Learning on Large-Scale Data for Specialized Computer Vision or Language Tasks.
+        </p>
+        <div class="hero-badges-group">
+          <span class="hero-badge-item">M1 Proposal: 07 Oct 2026</span>
+          <span class="hero-badge-item">M2 Draft: 28 Oct 2026</span>
+          <span class="hero-badge-item">M3 Final: 11 Nov 2026</span>
+        </div>
+      </div>
+
+      <!-- Problem Statement -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🎯</span>
+          <h2 class="section-title">Problem Statement</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            Assignment 2 reuses and extends the pipeline skills from Assignment 1 on a <strong>larger and more specialized problem</strong>.
+            Each group works deeply on one approved track; breadth across all tracks is not required.
+          </p>
+          
+          <h3>Chosen Task Track</h3>
+          <p>
+            <strong>[Fill in here]</strong> — State your selected task track: Image classification, Text classification / sequence labeling,
+            Object detection, Semantic / instance segmentation, Person / vehicle re-identification, Monocular depth estimation, or other approved task.
+          </p>
+
+          <h3>Learning Objectives</h3>
+          <ul class="styled-list">
+            <li>Propose, justify, and obtain approval for a dataset and task protocol suitable for specialized deep learning work.</li>
+            <li>Adapt an end-to-end pipeline to larger-scale data and task-specific annotations/metrics.</li>
+            <li>Compare a simple baseline with at least one pretrained or modern model under a documented fine-tuning strategy.</li>
+            <li>Design and interpret at least one controlled ablation or factor experiment.</li>
+            <li>Analyze errors, compute cost, and reproducibility for a specialized computer vision or language task.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Dataset Description & EDA -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">📊</span>
+          <h2 class="section-title">Dataset Description &amp; EDA</h2>
+        </div>
+        <div class="content-card">
+          <h3>Dataset Proposal &amp; Approval Record</h3>
+          <p>
+            Status: <strong>[Approved / Approved with conditions / Rejected]</strong>
+          </p>
+          <ul class="styled-list">
+            <li>Dataset name, source, version, and license.</li>
+            <li>Task, input, and output definitions.</li>
+            <li>Number of samples and annotation types.</li>
+            <li>Data-splitting plan and split unit used to prevent leakage.</li>
+            <li>Evaluation metric(s), baseline plan, planned pretrained model(s), compute estimate.</li>
+          </ul>
+
+          <h3>Task-Specific EDA Expectations</h3>
+          <p>
+            <strong>[Fill in here]</strong> — Report task-specific EDA (class distribution, bounding-box distributions, pixel distributions, identity counts, depth scales as applicable), leakage prevention, preprocessing, and example batches.
+          </p>
+        </div>
+      </section>
+
+      <!-- Methodology -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">⚙️</span>
+          <h2 class="section-title">Methodology</h2>
+        </div>
+        <div class="content-card">
+          <h3>Pipeline Overview</h3>
+          <div class="pipeline-diagram" style="color: #7c3aed;">
+            Raw data → preprocessing → data loader → model → loss → optimization → prediction → post-processing → evaluation
+          </div>
+
+          <h3>Technical Requirements</h3>
+          <ul class="styled-list">
+            <li><strong>1. Simple Baseline:</strong> A lightweight baseline model suitable for the task.</li>
+            <li><strong>2. Pretrained / Modern Model:</strong> Pretrained backbone with a documented fine-tuning procedure (freeze vs. full fine-tune).</li>
+            <li><strong>3. Controlled Experiment:</strong> At least one controlled factor study (e.g. freeze vs. fine-tune, augmentations, loss functions, backbones).</li>
+            <li><strong>4. Metrics &amp; Compute Cost:</strong> Task-specific metrics (mAP, mIoU, Rank-1/mAP, RMSE/δ, etc.) + training/inference compute cost.</li>
+          </ul>
+
+          <p style="margin-top:0.75rem">
+            <strong>[Fill in here]</strong> — Architecture details, parameter counts, loss formulations, training configurations, optimizer, lr schedule, hardware.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experimental Setup -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🧪</span>
+          <h2 class="section-title">Experimental Setup</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — For each experiment: state hypothesis, changed factor, fixed factors, evaluation metrics, and decision criteria.
+            Include hardware, software versions, seeds, checkpoint selection rules.
+          </p>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">📈</span>
+          <h2 class="section-title">Results</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Quantitative comparison tables, loss/metric curves, checkpoint selection, compute time, and qualitative visualization results.
+          </p>
+        </div>
+      </section>
+
+      <!-- Comparison & Discussion -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">⚖️</span>
+          <h2 class="section-title">Comparison &amp; Discussion</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Comparison of baseline vs. modern models; compute-cost vs. performance trade-offs; hypothesis validation.
+          </p>
+        </div>
+      </section>
+
+      <!-- Error Analysis -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🔍</span>
+          <h2 class="section-title">Error Analysis</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Error categories, failure cases, ablation analysis, and proposed improvements.
+          </p>
+        </div>
+      </section>
+
+      <!-- Limitations & Conclusion -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">💡</span>
+          <h2 class="section-title">Limitations &amp; Conclusion</h2>
+        </div>
+        <div class="content-card">
+          <p>
+            <strong>[Fill in here]</strong> — Limitations, generalization capabilities, future directions, and concise project summary.
+          </p>
+        </div>
+      </section>
+
+      <!-- Links & Deliverables -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🔗</span>
+          <h2 class="section-title">Deliverables &amp; Links</h2>
+        </div>
+        <div class="links-grid">
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box" style="background:#f3e8ff; color:#7c3aed;">💻</div>
+            <div>
+              <span class="link-label">Source Code</span>
+              <span class="link-sub">[GitHub Repo]</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box" style="background:#f3e8ff; color:#7c3aed;">🗂️</div>
+            <div>
+              <span class="link-label">Checkpoints</span>
+              <span class="link-sub">[Model Weights]</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box" style="background:#f3e8ff; color:#7c3aed;">📄</div>
+            <div>
+              <span class="link-label">Report / Slides</span>
+              <span class="link-sub">[PDF / Slides]</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box" style="background:#f3e8ff; color:#7c3aed;">▶️</div>
+            <div>
+              <span class="link-label">YouTube Video</span>
+              <span class="link-sub">CO3133-261-GroupXX-Assignment2</span>
+            </div>
+          </a>
+          <a href="#" class="link-btn-card" target="_blank" rel="noopener">
+            <div class="link-icon-box" style="background:#f3e8ff; color:#7c3aed;">📋</div>
+            <div>
+              <span class="link-label">Dataset Proposal</span>
+              <span class="link-sub">[Proposal &amp; Status]</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- AI Usage Disclosure -->
+      <section class="section-block">
+        <div class="section-header">
+          <span class="section-icon">🛡️</span>
+          <h2 class="section-title">AI Usage Disclosure</h2>
+        </div>
+        <div class="disclosure-card">
+          <h3>Assignment 2 AI Usage Disclosure</h3>
+        </div>
+      </section>
+
     </div>
-  </div>
-</section>
+  </main>
 
-<footer><div class="wrap">CO3133 · Semester-261 · Group [ID] · Assignment 2</div></footer>
-
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <p>
+        <strong>Ho Chi Minh City University of Technology – VNU-HCM</strong><br />
+        Faculty of Computer Science and Engineering<br />
+        Deep Learning and Its Applications (CO3133) · Semester-261
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
